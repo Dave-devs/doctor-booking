@@ -1,0 +1,26 @@
+[
+    {
+        "speciality": "General Physician",
+        "imageKey": "general_physician"
+    },
+    {
+        "speciality": "Gynecologist",
+        "imageKey": "gynecologist"
+    },
+    {
+        "speciality": "Dermatologist",
+        "imageKey": "dermatologist"
+    },
+    {
+        "speciality": "Pediatricians",
+        "imageKey": "pediatricians"
+    },
+    {
+        "speciality": "Neurologist",
+        "imageKey": "neurologist"
+    },
+    {
+        "speciality": "Gastroenterologist",
+        "imageKey": "gastroenterologist"
+    }
+]
