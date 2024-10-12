@@ -29,7 +29,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            
+
             {/* ....... Copyrigt Text ..... */}
             <div>
                 <hr />

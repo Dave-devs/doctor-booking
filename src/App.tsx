@@ -1,6 +1,5 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom"
 import Doctors from "./pages/Doctors"
-import Doctor from "./pages/Doctor"
 import Login from "./pages/Login"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
@@ -16,7 +15,7 @@ const App = () => {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path="doctors" element={<Doctors />} />
-        <Route path="doctors/:speciality" element={<Doctor />} />
+        <Route path="doctors/:speciality" element={<Doctors />} />
         <Route path="login" element={<Login />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />

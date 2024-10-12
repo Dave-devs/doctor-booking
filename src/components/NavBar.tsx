@@ -12,14 +12,14 @@ const NavBar = () => {
     return (
         <div className="flex flex-col md:flex-row items-center justify-between text-sm py-3 mb-5 border-b border-b-grey-400">
             {/* Logo */}
-            <img className="w-44 cursor-pointer" src={images.logo} alt="" />
+            <img onClick={() => { navigate('/'); scrollTo(0, 0) }} className="w-44 cursor-pointer" src={images.logo} alt="" />
             {/* Nav Buttons */}
             <ul className="hidden md:flex items-start gap-5 font-medium">
                 <NavLink className="" to="/">
                     <li className="py-1">Home</li>
                     <hr className="hidden border-none outline-none h-0.5 bg-primary w-3/5 m-auto" />
                 </NavLink>
-                <NavLink className="" to="/doctors">
+                <NavLink className="" to='/doctors/:speciality'>
                     <li className="py-1">All Doctors</li>
                     <hr className="hidden border-none outline-none h-0.5 bg-primary w-3/5 m-auto" />
                 </NavLink>
@@ -35,7 +35,7 @@ const NavBar = () => {
             <div className="flex items-center gap-4">
                 {
                     token
-                    // Profile Icon
+                        // Profile Icon
                         ? <div className="flex items-center gap-2 cursor-pointer group relative">
                             <img className="w-8 h-8 rounded-full" src={images.profile} alt="" />
                             <IoChevronDownOutline className="w-3.5 h-3.5" />
