@@ -4,6 +4,7 @@ import { DoctorData } from "../@types/doctors";
 
 interface AppContextType {
     doctors: DoctorData[];
+    currencySymbol: string
 }
 
 export const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -16,9 +17,11 @@ const AppContextProvider = ({ children }: AppContextProviderProps) => {
 
 
     const doctors: DoctorData[] = doctorsData;
+    const currencySymbol = '$';
 
     const value = {
         doctors,
+        currencySymbol
     };
 
     return (
