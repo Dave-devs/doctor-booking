@@ -1,4 +1,4 @@
-import { useContext, useMemo } from "react";
+import { useContext, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AppContext } from "../context/context";
 import { images, ImageKeys } from "../constants/images";
@@ -6,6 +6,8 @@ import { images, ImageKeys } from "../constants/images";
 const Doctors = () => {
   const navigate = useNavigate();
   const { speciality } = useParams();
+
+  const [showFilter, setShowFilter] = useState<boolean>(false);
 
   const context = useContext(AppContext);
 
@@ -27,7 +29,9 @@ const Doctors = () => {
     <div>
       <p className="text-grey-600">Browse through the doctors specialist.</p>
       <div className="flex flex-col sm:flex-row items-start gap-5 mt-5">
-        <div className="flex flex-col gap-4 text-sm text-grey-600">
+        <button className={`py-1 px-3 border border-accent rounded text-sm sm:hidden transition-all ${showFilter ? "bg-primary text-wt" : ""} `} onClick={() => setShowFilter(prev => !prev)}>Filters</button>
+        {/* <button onClick={() => setShowFilter(prev => !prev)}>Filters</button> */}
+        <div className={`flex-col gap-4 text-sm text-grey-600 ${showFilter ? "flex" : "hidden sm:flex"}`}>
           <p
             onClick={() =>
               speciality === "General Physician"
