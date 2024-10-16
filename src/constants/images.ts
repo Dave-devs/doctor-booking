@@ -25,6 +25,7 @@ import doc14 from "../assets/images/doc14.png";
 import doc15 from "../assets/images/doc15.png";
 import appointment_img from  "../assets/images/appointment_img.png";
 import about_image from '../assets/images/about_image.png'
+import contact_image from '../assets/images/contact_image.png'
 
 
 
@@ -41,6 +42,7 @@ export const images: { [key: string]: string } = {
     gastroenterologist,
     appointment_img,
     about_image,
+    contact_image,
     doc1,
     doc2,
     doc3,
